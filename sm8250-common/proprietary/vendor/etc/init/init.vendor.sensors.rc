@@ -49,6 +49,12 @@ on early-boot
     chmod 0664 /dev/ssc_interactive
     chown system system /dev/ssc_interactive
 
+on post-fs-data
+
+    write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:1344000 1:1344000 2:1344000 3:1344000 4:1056000 5:1056000 6:1056000 7:844800"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms "1000"
+    write /sys/devices/system/cpu/cpu_boost/sched_boost_on_input 1
+
 on post-fs-data && property:ro.build.type=userdebug
     #sensors log dir
 
