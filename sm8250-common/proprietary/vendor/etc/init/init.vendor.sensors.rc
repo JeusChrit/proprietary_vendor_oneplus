@@ -55,6 +55,10 @@ on post-fs-data
     write /sys/devices/system/cpu/cpu_boost/input_boost_ms "1000"
     write /sys/devices/system/cpu/cpu_boost/sched_boost_on_input 1
 
+on boot
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms "1000"
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 1000
+
 on post-fs-data && property:ro.build.type=userdebug
     #sensors log dir
 
