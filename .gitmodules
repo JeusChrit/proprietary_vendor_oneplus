@@ -1,3 +1,6 @@
 [submodule "oneplus8t"]
 	path = oneplus8t
 	url = git@github.com:JeusChrit/proprietary_vendor_oneplus_oneplus8t.git
+[submodule "oneplus8pro"]
+	path = oneplus8pro
+	url = git@github.com:JeusChrit/proprietary_vendor_oneplus_oneplus8pro.git
