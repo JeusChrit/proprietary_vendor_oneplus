@@ -4,3 +4,6 @@
 [submodule "oneplus8pro"]
 	path = oneplus8pro
 	url = git@github.com:JeusChrit/proprietary_vendor_oneplus_oneplus8pro.git
+[submodule "camera"]
+	path = camera
+	url = https://gitlab.com/cjh1249131356/vendor_oneplus_camera.git
