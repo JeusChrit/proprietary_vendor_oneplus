@@ -49,7 +49,7 @@ on early-boot
     chmod 0664 /dev/ssc_interactive
     chown system system /dev/ssc_interactive
 
-on property:init.svc.bootanim=stopped
+on property:vendor.post_boot.parsed=1
     # Configure CPU boost settings
     write /sys/devices/system/cpu/cpu_boost/input_boost_ms 400
     write /sys/devices/system/cpu/cpu_boost/input_boost_freq "0:691200 1:691200 2:691200 3:691200 4:1382400 5:1382400 6:1382400 7:1401600"
