@@ -1479,7 +1479,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8250-common/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/oneplus/sm8250-common/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
     vendor/oneplus/sm8250-common/proprietary/vendor/firmware/a650_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a650_gmu.bin \
-    vendor/oneplus/sm8250-common/proprietary/vendor/firmware/a650_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a650_sqe.fw \
     vendor/oneplus/sm8250-common/proprietary/vendor/firmware/a650_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a650_zap.b00 \
     vendor/oneplus/sm8250-common/proprietary/vendor/firmware/a650_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a650_zap.b01 \
     vendor/oneplus/sm8250-common/proprietary/vendor/firmware/a650_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a650_zap.b02 \
