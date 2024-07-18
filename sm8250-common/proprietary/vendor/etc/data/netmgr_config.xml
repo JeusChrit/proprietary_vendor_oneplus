@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
      Netmgr Module configuration XML file
-     Copyright (c) 2013, 2016-2022 Qualcomm Technologies, Inc.
+     Copyright (c) 2013, 2016-2021 Qualcomm Technologies, Inc.
      All Rights Reserved.
      Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -2677,8 +2677,16 @@
       <data name="dataformat_ul_data_aggregation_protocol" type="int"> 9 </data>
       <data name="dataformat_dl_gro_enabled" type="int"> 1 </data>
       <data name="dataformat_ul_gso_enabled" type="int"> 1 </data>
+      <!-- #ifdef OPLUS_BUG_STABILITY -->
+      <!-- YangHao@BSP.STABILITY, 2020/04/03, for ipa crash issue -->
+      <!--
       <data name="rsc" type="int"> 1 </data>
       <data name="rsb" type="int"> 1 </data>
+      -->
+      <!-- #else -->
+      <data name="rsc" type="int"> 0 </data>
+      <data name="rsb" type="int"> 0 </data>
+      <!-- #endif /* OPLUS_BUG_STABILITY */ -->
       <data name="mhip" type="int"> 1 </data>
       <data name="phys_net_dev" type="string"> rmnet_mhi0 </data>
       <data name="rtm_rmnet_data_enabled" type="int"> 1 </data>
@@ -2803,7 +2811,6 @@
       <data name="kfc_mode" type="int"> 4 </data>
       <data name="kfc_qmap" type="int"> 1 </data>
       <data name="qmi_pc" type="int"> 1 </data>
-      <data name="dfc_ps_ext" type="int"> 0 </data>
       <data name="tcp_ack_prio" type="int"> 1 </data>
 
       <data name="single_qmux_ch_enabled" type="int"> 1 </data>
@@ -2823,8 +2830,16 @@
       <data name="dataformat_ul_data_aggregation_protocol" type="int"> 9 </data>
       <data name="dataformat_dl_gro_enabled" type="int"> 1 </data>
       <data name="dataformat_ul_gso_enabled" type="int"> 1 </data>
+      <!-- #ifdef OPLUS_BUG_STABILITY -->
+      <!-- YangHao@BSP.STABILITY, 2020/04/03, for ipa crash issue -->
+      <!--
       <data name="rsc" type="int"> 1 </data>
       <data name="rsb" type="int"> 1 </data>
+      -->
+      <!-- #else -->
+      <data name="rsc" type="int"> 0 </data>
+      <data name="rsb" type="int"> 0 </data>
+      <!-- #endif /* OPLUS_BUG_STABILITY */ -->
       <data name="mhip" type="int"> 1 </data>
       <data name="phys_net_dev" type="string"> rmnet_mhi0 </data>
       <data name="rtm_rmnet_data_enabled" type="int"> 1 </data>
@@ -2939,6 +2954,11 @@
       </list>
       <!-- Number of above reverse data ports inited on bootup -->
       <data name="static_rev_links" type="int"> 4 </data>
+
+     <!-- #ifdef OPLUS_BUG_STABILITY -->
+     <!-- Liwei@Connectivity.NETWORK, 2021/04/25, for set default tcp_mtu_probing-->
+     <data name="tcp_mtu_probing" type="int"> 1 </data>
+     <!-- #endif /* OPLUS_BUG_STABILITY */ -->
    </listitem>
 
   <!-- lito parameters -->
@@ -2970,8 +2990,16 @@
       <data name="phys_net_dev" type="string"> rmnet_ipa0 </data>
       <data name="rtm_rmnet_data_enabled" type="int"> 1 </data>
       <data name="rtnetlink_tc_enabled" type="int"> 1 </data>
+      <!-- #ifdef OPLUS_BUG_STABILITY -->
+      <!-- YangHao@BSP.STABILITY, 2020/04/03, for ipa crash issue -->
+      <!--
       <data name="rsc" type="int"> 1 </data>
       <data name="rsb" type="int"> 1 </data>
+      -->
+      <!-- #else -->
+      <data name="rsc" type="int"> 0 </data>
+      <data name="rsb" type="int"> 0 </data>
+      <!-- #endif /* OPLUS_BUG_STABILITY */ -->
       <data name="rmnet_shs" type="int"> 1 </data>
       <data name="rmnet_perf" type="int"> 3 </data>
       <data name="uplink_priority" type="int"> 1 </data>
@@ -3080,6 +3108,11 @@
      </list>
      <!-- Number of above reverse data ports inited on bootup -->
      <data name="static_rev_links" type="int"> 4 </data>
+
+     <!-- #ifdef OPLUS_BUG_STABILITY -->
+     <!-- Liwei@Connectivity.NETWORK, 2021/04/25, for set default tcp_mtu_probing-->
+     <data name="tcp_mtu_probing" type="int"> 1 </data>
+     <!-- #endif /* OPLUS_BUG_STABILITY */ -->
    </listitem>
 
    <!-- lahaina parameters -->
@@ -3366,6 +3399,11 @@
       </list>
       <!-- Number of above reverse data ports inited on bootup -->
       <data name="static_rev_links" type="int"> 4 </data>
+
+     <!-- #ifdef OPLUS_BUG_STABILITY -->
+     <!-- Liwei@Connectivity.NETWORK, 2021/04/25, for set default tcp_mtu_probing-->
+     <data name="tcp_mtu_probing" type="int"> 1 </data>
+     <!-- #endif /* OPLUS_BUG_STABILITY */ -->
    </listitem>
 
    <!-- monaco parameters -->
@@ -3383,11 +3421,6 @@
       <data name="single_qmux_ch_enabled" type="int"> 1 </data>
       <data name="single_qmux_ch_conn_id_str" type="string"> rmnet0 </data>
       <data name="single_qmux_ch_name" type="string"> DATA5_CNTL </data>
-
-      <data name="tc_ul_baserate" type="int"> 155000000 </data>
-      <data name="dynamic_tc_ul_baserate" type="int"> 1 </data>
-      <data name="tc_ul_burst" type="int"> 25000 </data>
-
       <data name="rmnet_data_enabled" type="int"> 1 </data>
       <data name="dataformat_agg_dl_pkt" type="int"> 10 </data>
       <data name="dataformat_agg_dl_size" type="int"> 8192 </data>
